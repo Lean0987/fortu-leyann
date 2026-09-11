@@ -47,5 +47,18 @@ defined('PREVENT_DIRECT_ACCESS') or exit('No direct script access allowed');
 $router->get('/', 'UsersController::getUsers');
 $router->get('/users', 'UsersController::getUsers');
 
-
 $router->get('/testdb', 'UsersController::testdb');
+
+$router->get('/products', 'ProductController::index');
+
+$router->get('/products/create', 'ProductController::create');
+$router->post('/products/create', 'ProductController::create');
+
+$router->get('/products/edit/{id}', 'ProductController::edit');
+$router->post('/products/edit/{id}', 'ProductController::edit');
+
+$router->post('/products/delete/{id}', 'ProductController::delete');
+
+$router->get('/login', 'UsersController::login');
+$router->post('/login', 'UsersController::login');
+$router->get('/logout', 'UsersController::logout');
