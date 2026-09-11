@@ -1,21 +1,86 @@
-<h1>Login</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<?php if (!empty($error)): ?>
-    <p style="color: red;">
-        <?= htmlspecialchars($error); ?>
-    </p>
-<?php endif; ?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<form method="POST" action="/login">
+    <title>Hello Kitty Shop - Login</title>
 
-    <label>Username:</label><br>
-    <input type="text" name="username" required>
-    <br><br>
+    <link rel="stylesheet" href="/style.css">
+</head>
 
-    <label>Password:</label><br>
-    <input type="password" name="password" required>
-    <br><br>
+<body>
 
-    <button type="submit">Login</button>
+<div class="login-page">
 
-</form>
+    <div class="login-card">
+
+        <div class="login-logo">
+            🐱🎀
+        </div>
+
+        <h1>Hello Kitty Shop 🎀</h1>
+
+        <p class="login-subtitle">
+            Welcome! Please login to continue 💗
+        </p>
+
+        <?php if (!empty($error)): ?>
+
+            <div class="error">
+                <?= htmlspecialchars($error); ?>
+            </div>
+
+        <?php endif; ?>
+
+        <form method="POST" action="/login">
+
+            <div class="form-group">
+
+                <label>Username</label>
+
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+            </div>
+
+            <button type="submit">
+                🎀 Login 🎀
+            </button>
+
+        </form>
+
+        <div class="footer">
+
+            <div class="bows">
+                🎀 🎀 🎀
+            </div>
+
+            Made with love 💗
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
